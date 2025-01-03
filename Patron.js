@@ -8966,7 +8966,7 @@ let teks = `
 * *Number :* ${res.name}
 * *Total followers :* ${res.subscribers}
 * *Status :* ${res.state}
-* *Verified :* ${res.verification == "VERIFIED" ? "Verified" : "No
+* *Verified :* ${res.verification == "VERIFIED" ? "Verified" : "No"}
 `
 return m.reply(teks)
 }
