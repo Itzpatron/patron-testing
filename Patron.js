@@ -3809,16 +3809,16 @@ const text12 = `*Hi @${sender.split("@")[0]} 🚹*
 𝐏𝐀𝐓𝐑𝐎𝐍-𝐌𝐃 𝐑𝐄𝐀𝐋𝐄𝐀𝐒𝐄𝐃 𝐎𝐍 𝐆𝐈𝐓𝐇𝐔𝐁
 
 *REPO LINK:* https://github.com/Itzpatron/PATRON-MD
+DO CHECK THE README
 
 *HOW TO DEPLOY ON PANEL:* https://youtu.be/ygIOzvZS0z0?si=HBG2WzpWO-2cBBkJ
 
-*DOWNLOAD LINK:* Check repo link readme
+*DOWNLOAD LINK:* https://github.com/Itzpatron/PATRON-MD/archive/refs/heads/master.zip 
+*USE https://devuploads.com/h1u6arhq80vf IF THE FIRST ONE SHOWS ERROR*
 
 *CHANNEL LINK:* https://whatsapp.com/channel/0029Val0s0rIt5rsIDPCoD2q
 
-*DEPLOYMENT LINK:* 
-https://dashboard.katabump.com/auth/login#ad2175
-USE 100% CPU LEAST OR ANOTHER PANEL
+*DEPLOYMENT LINK:* https://dashboard.katabump.com/auth/login#ad2175
 
 Type .panel if you want to buy panels from me
 
