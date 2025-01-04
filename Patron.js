@@ -3809,9 +3809,12 @@ const text12 = `*Hi @${sender.split("@")[0]} 🚹*
 𝐏𝐀𝐓𝐑𝐎𝐍-𝐌𝐃 𝐑𝐄𝐀𝐋𝐄𝐀𝐒𝐄𝐃 𝐎𝐍 𝐆𝐈𝐓𝐇𝐔𝐁
 
 *REPO LINK:* https://github.com/Itzpatron/PATRON-MD
-DO CHECK THE README
 
 *HOW TO DEPLOY ON PANEL:* https://youtu.be/ygIOzvZS0z0?si=HBG2WzpWO-2cBBkJ
+
+:HOW TO DEPLOY ON BLUESERVER:* https://youtu.be/eYquwVMhmuM?si=afcMtzgyn3sU0uVG
+
+*SERVER LINK:* https://blueserver-patron-x.hf.space
 
 *DOWNLOAD LINK:* https://github.com/Itzpatron/PATRON-MD/archive/refs/heads/master.zip 
 *USE https://devuploads.com/h1u6arhq80vf IF THE FIRST ONE SHOWS ERROR*
@@ -3864,7 +3867,7 @@ case 'request': case 'reportbug': {
             teks1 = `\n\n*User* : @${
    m.sender.split("@")[0]
   }\n*Request/Bug* : ${text}`
-            teks2 = `\n\n*Hai ${pushname}, Your request has been continued to my owner*.\n*Please wait...*`
+            teks2 = `\n\n*Hey ${pushname}, Your request has been continued to my owner*.\n*Please wait...*`
             for (let i of owner) {
 NanoBotz.sendMessage(i + "@s.whatsapp.net", {
 text: textt + teks1,
