@@ -4031,7 +4031,7 @@ case 'repo': {
 
 ⚡ *𝙳𝙴𝙿𝙻𝙾𝚈𝙼𝙴𝙽𝚃 𝙻𝙸𝙽𝙺:* [Katabump Dashboard](https://dashboard.katabump.com/auth/login#ad2175)
 
-💡 *Need a Panel?* Type *.panel* to buy one from me.
+💡 *Need a Panel?* Type *.patron* to buy one from me.
 
 🔄 *Keep Your Bot Updated:* Use *.update* to always stay updated.
 
@@ -6808,7 +6808,7 @@ DM if interested
   break
 
   case 'patron':{
-      replynano('*PATRON SOLOS ALL 🚹*\n Type .donate to donate to the owner\n\n *Type .panel if u want to buy panel*')
+      replynano('*PATRON SOLOS ALL 🚹*\nType .donate to donate to the owner\n\n*Type .panel if u want to buy panel*\nType .owner to get dev number')
     }
     break
 
@@ -10741,7 +10741,7 @@ END:VCARD`;
 🛠 *Role:* ᴘᴀᴛʀᴏɴ-ᴍᴅ ᴅᴇᴠ
 📞 *WhatsApp:* +2348133729715
 📌 *Note:* _Need assistance? Contact me, but respect my time._
-🚹 *Type .panel if you want to buy panel from me*
+🚹 *Type .patron to see more about me*
 `;
 
     // Send contact vCard
