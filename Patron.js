@@ -4025,7 +4025,7 @@ case 'repo': {
 📌 *𝚁𝙴𝙿𝙾 𝙻𝙸𝙽𝙺:* [GitHub](https://github.com/Itzpatron/PATRON-MD)
 
 📺 *𝙷𝙾𝚆 𝚃𝙾 𝙳𝙴𝙿𝙻𝙾𝚈:*
-- [On Panel](https://youtu.be/ygIOzvZS0z0?si=HBG2WzpWO-2cBBkJ)
+- [On Panel](https://youtu.be/o7daE5lkmQE)
 
 📢 *𝙲𝙷𝙰𝙽𝙽𝙴𝙻 𝙻𝙸𝙽𝙺:* [WhatsApp Channel](https://whatsapp.com/channel/0029Val0s0rIt5rsIDPCoD2q)
 
