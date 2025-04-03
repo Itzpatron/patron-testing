@@ -7736,38 +7736,50 @@ case 'play': {
 };
 break;
 case 'ytmp3': {
-    if (!global.lastYouTubeSearch) return reply('❌ *No recent YouTube search.*\n_Use `.play <title>` first._');
+    if (!global.lastYouTubeSearch) {
+        return reply('❌ *No recent YouTube search.*\n_Use `.play <title>` first._');
+    }
 
     let { link, title, thumbnail } = global.lastYouTubeSearch;
     reply(`🎵 *Downloading audio...*`);
 
-    let apiUrl = `https://apis.davidcyriltech.my.id/download/ytmp3?url=${link}`;
-    let downloadRes = await fetch(apiUrl);
-    let downloadJson = await downloadRes.json();
+    let apiUrl = `https://apis.davidcyriltech.my.id/download/ytmp3?url=${encodeURIComponent(link)}`;
 
-    console.log(downloadJson); // Debugging
+    try {
+        let downloadRes = await fetch(apiUrl);
+        if (!downloadRes.ok) {
+            throw new Error(`Failed to fetch: ${downloadRes.statusText}`);
+        }
+        let downloadJson = await downloadRes.json();
 
-    if (!downloadJson.success || !downloadJson.download_link) {
-        return reply(`❌ *Failed to get audio download link.*\n\n*API Response:*\n\`\`\`${JSON.stringify(downloadJson, null, 2)}\`\`\``);
+        console.log(downloadJson); // Debugging
+
+        if (!downloadJson.success || !downloadJson.download_link) {
+            console.error('API response does not contain expected fields:', downloadJson);
+            return reply(`❌ *Failed to get audio download link.*\n\n*API Response:*\n\`\`\`${JSON.stringify(downloadJson, null, 2)}\`\`\``);
+        }
+
+        let audioUrl = downloadJson.download_link;
+
+        // Send the audio file
+        await NanoBotz.sendMessage(m.chat, {
+            audio: { url: audioUrl },
+            mimetype: 'audio/mpeg',
+            fileName: `MP3 BY *PATRON-MD*`
+        }, { quoted: m });
+
+        // Send a confirmation message with an image
+        await NanoBotz.sendMessage(m.chat, {
+            image: { url: thumbnail },
+            caption: `🎶 *${title}*\n✅ *Download complete!*`,
+            footer: 'Patron-md YouTube Downloader'
+        }, { quoted: m });
+    } catch (error) {
+        console.error('Error downloading audio:', error);
+        reply('❌ *An error occurred while downloading the audio. Please try again later.*');
     }
-
-    let audioUrl = downloadJson.download_link;
-
-    // Send the audio file
-    NanoBotz.sendMessage(m.chat, { 
-        audio: { url: audioUrl }, 
-        mimetype: 'audio/mpeg', 
-        fileName: `MP3 BY *PATRON-MD*`
-    }, { quoted: m });
-
-    // Send a confirmation message with an image
-    NanoBotz.sendMessage(m.chat, { 
-        image: { url: thumbnail },
-        caption: `🎶 *${title}*\n✅ *Download complete!*`,
-        footer: 'Patron-md YouTube Downloader'
-    }, { quoted: m });
-};
-break;
+    break;
+}
 
 case 'ytmp4': {
     if (!global.lastYouTubeSearch) return reply('❌ *No recent YouTube search.*\n_Use `.play <title>` first._');
