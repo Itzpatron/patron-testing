@@ -7741,7 +7741,7 @@ case 'ytmp3': {
     let { link, title, thumbnail } = global.lastYouTubeSearch;
     reply(`🎵 *Downloading audio...*`);
 
-    let apiUrl = `https://api-ix-xi.hf.space/api/ytmp3?url=${link}`;
+    let apiUrl = `https://apis.davidcyriltech.my.id/download/ytmp3?url=${link}`;
     let downloadRes = await fetch(apiUrl);
     let downloadJson = await downloadRes.json();
 
@@ -7764,7 +7764,7 @@ case 'ytmp3': {
     NanoBotz.sendMessage(m.chat, { 
         image: { url: thumbnail },
         caption: `🎶 *${title}*\n✅ *Download complete!*`,
-        footer: 'NanoBotz YouTube Downloader'
+        footer: 'Patron-md YouTube Downloader'
     }, { quoted: m });
 };
 break;
